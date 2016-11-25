@@ -67,6 +67,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.config.js" />
+    <Content Include="app\components\cars\cars.html" />
+    <Content Include="app\components\cars\cars.controller.js" />
+    <Content Include="app\components\flights\flights.controller.js" />
+    <Content Include="app\components\flights\flights.html" />
+    <Content Include="app\components\hotels\hotels.controller.js" />
+    <Content Include="app\components\hotels\hotels.html" />
+    <Content Include="app\components\recent-searches\recent-searches.html" />
+    <Content Include="app\components\recent-searches\recent-searches.controller.js" />
+    <Content Include="app\components\search-results\search-results.html" />
+    <Content Include="app\components\search-results\search-results.controller.js" />
     <Content Include="app\components\travel-app.html" />
     <Content Include="packages.config" />
     <Content Include="scripts\vendors\angular.min.js.map" />
