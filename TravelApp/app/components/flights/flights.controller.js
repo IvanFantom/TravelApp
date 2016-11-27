@@ -5,11 +5,12 @@
         .module('app')
         .controller('FlightsController', FlightsController);
 
-    FlightsController.$inject = ['$scope', '$state'];
+    FlightsController.$inject = ['$scope'];
 
-    function FlightsController($scope, $state) {
-        var ctrl = this;
-
-
+    function FlightsController($scope) {
+        $scope.startDate = new Date();
+        $scope.endDate = new Date();
+        $scope.from = '';
+        $scope.to = '';
     }
 })();
