@@ -5,12 +5,17 @@
         .module('app')
         .controller('FlightsController', FlightsController);
 
-    FlightsController.$inject = ['$scope'];
+    FlightsController.$inject = ['$scope', 'RecentSearches', 'Flight'];
 
-    function FlightsController($scope) {
-        $scope.startDate = new Date();
-        $scope.endDate = new Date();
-        $scope.from = '';
-        $scope.to = '';
+    function FlightsController($scope, RecentSearches, Flight) {
+        $scope.vm = new Flight();
+
+        $scope.clear = function() {
+            $scope.vm = new Flight();
+        };
+
+        $scope.search = function() {
+            RecentSearches.add($scope.vm);
+        };
     }
 })();

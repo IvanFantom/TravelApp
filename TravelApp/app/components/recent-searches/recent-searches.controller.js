@@ -5,11 +5,16 @@
         .module('app')
         .controller('RecentSearchesController', RecentSearchesController);
 
-    RecentSearchesController.$inject = ['$state'];
+    RecentSearchesController.$inject = ['$scope', 'RecentSearches'];
 
-    function RecentSearchesController($state) {
-        var ctrl = this;
+    function RecentSearchesController($scope, RecentSearches) {
+        $scope.history = RecentSearches.history;
 
-
+        $scope.showSearches = function() {
+            return $scope.history.length > 0;
+        }
+        $scope.remove = function (index) {
+            $scope.history.splice(index, 1);
+        }
     }
 })();

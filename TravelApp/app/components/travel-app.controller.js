@@ -8,8 +8,6 @@
     TravelAppController.$inject = ['$state'];
 
     function TravelAppController($state) {
-        var ctrl = this;
-
 
     }
 })();

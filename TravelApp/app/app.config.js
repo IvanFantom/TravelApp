@@ -18,10 +18,6 @@
                         templateUrl: 'app/components/travel-app.html',
                         controller: 'TravelAppController as travelAppCtrl'
                     },
-                    'search-results-view@travel-app': {
-                        templateUrl: 'app/components/search-results/search-results.html',
-                        controller: 'SearchResultsController as searchResultsCtrl'
-                    },
                     'recent-searches-view@travel-app': {
                         templateUrl: 'app/components/recent-searches/recent-searches.html',
                         controller: 'RecentSearchesController as recentSearchesCtrl'

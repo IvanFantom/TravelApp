@@ -75,13 +75,13 @@
     <Content Include="app\components\hotels\hotels.html" />
     <Content Include="app\components\recent-searches\recent-searches.html" />
     <Content Include="app\components\recent-searches\recent-searches.controller.js" />
-    <Content Include="app\components\search-results\search-results.html" />
-    <Content Include="app\components\search-results\search-results.controller.js" />
     <Content Include="app\components\shared\directives\date-picker\date-picker.directive.js" />
     <Content Include="app\components\shared\directives\date-picker\date-picker.html" />
     <Content Include="app\components\shared\directives\location\location.directive.js" />
     <Content Include="app\components\shared\directives\location\location.html" />
     <Content Include="app\components\travel-app.html" />
+    <Content Include="app\providers\flight.factory.js" />
+    <Content Include="app\providers\recent-searches.factory.js" />
     <Content Include="packages.config" />
     <Content Include="scripts\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="scripts\angular-ui\ui-bootstrap-tpls.min.js" />

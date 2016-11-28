@@ -7,6 +7,7 @@
 
     function LocationDirective() {
         return {
+            restrict: 'E',
             scope: {
                 model: '=',
                 title: '@'
