@@ -5,11 +5,19 @@
         .module('app')
         .controller('CarsController', CarsController);
 
-    CarsController.$inject = ['$scope', '$state'];
+    CarsController.$inject = ['$scope', 'RecentSearches', 'Car', 'TYPES'];
 
-    function CarsController($scope, $state) {
-        var ctrl = this;
+    function CarsController($scope, RecentSearches, Car, TYPES) {
+        $scope.vm = new Car();
+        $scope.types = TYPES;
 
+        $scope.clear = function() {
+            $scope.vm = new Car();
+        };
 
-    }
+        $scope.search = function() {
+            RecentSearches.add($scope.vm);
+        };
+    };
+
 })();

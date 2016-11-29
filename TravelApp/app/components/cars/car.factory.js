@@ -3,27 +3,24 @@
 
     angular
         .module('app')
-        .factory('Flight', ['$filter', function ($filter) {
-            function Flight() {
+        .factory('Car', ['$filter', 'TYPES', function ($filter, TYPES) {
+            function Car() {
                 var self = this;
 
                 self.startDate = new Date();
                 self.endDate = new Date();
-                self.from = '';
-                self.to = '';
-
-                self.setData = function(data) {
-                    angular.extend(self, data);
-                };
+                self.type = 1;
+                self.location = '';
 
                 self.toString = function () {
                     var formattedStartDate = $filter('date')(self.startDate, 'MMMM dd, y');
                     var formattedEndDate = $filter('date')(self.endDate, 'MMMM dd, y');
-                    return formattedStartDate + ' - ' + formattedEndDate + ', ' + self.from + ' ✈ ' + self.to;
+
+                    return formattedStartDate + ' - ' + formattedEndDate + ', ' + self.location + ' 🚗  ' + TYPES[self.type];
                 }
             };
 
-            return Flight;
+            return Car;
         }]);
 
 })();
