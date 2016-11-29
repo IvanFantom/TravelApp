@@ -8,7 +8,7 @@
     routesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function routesConfig($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/flights');
 
         $stateProvider
             .state('travel-app', {
